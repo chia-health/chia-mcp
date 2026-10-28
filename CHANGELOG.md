@@ -1,9 +1,17 @@
 # Changelog
 
-All notable changes to doctormcp will be documented in this file.
+All notable changes to the Chia Health MCP server will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+
+## [1.1.1] - 2026-10-28
+
+### Changed
+- Public name is Chia Health (`chia-health`) in the README, `server.json` and the name the server reports. Tool names are unchanged.
+- README and `llms-install.md` list the tool names the server really uses (`medications_list`, `auth_start`, ...), not the dotted forms.
+- README no longer quotes plan prices; current prices are on [chia.health](https://chia.health) and come from `medications_list`, `medications_details` and `medications_pricing`.
+- Dropped the `online-doctor` tag from `server.json`.
 
 ## [1.1.0] - 2026-03-31
 

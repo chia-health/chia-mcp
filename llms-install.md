@@ -20,21 +20,15 @@ Add to your MCP client configuration:
 
 After adding, test with these public tools (no auth required):
 
-- `medications.categories` — returns medication categories (Weight Loss, Peptides, Longevity, etc.)
-- `medications.list` — returns available medications with pricing
-- `medications.availability` — check if a medication ships to a given US state
-- `eligibility.check` — pre-screen patient eligibility (age, state, BMI)
+- `medications_categories` — returns medication categories (Weight Loss, Peptides, Longevity, etc.)
+- `medications_list` — returns available medications with pricing
+- `medications_availability` — check if a medication ships to a given US state
 
 ## Authentication
 
-Discovery tools (browse medications, pricing, eligibility, intake questions) are **public** — no API key needed. The patient can browse freely.
+Discovery tools (browse medications, pricing, eligibility) are **public** — no API key needed.
 
-When the patient is ready to proceed with their medical intake, identity verification starts:
-
-1. `auth.start(email, phone, name)` — sends a 6-digit OTP to the patient's email, returns a `session_id`
-2. `auth.verify_otp(session_id, code)` — verifies the code, returns a guest-scoped bearer token
-
-The guest token enables intake submission, consent signing, ordering, and checkout. After payment, `auth.check_payment` upgrades the token to full scope for portal access (care plan, messaging, refills).
+Patient-specific tools (intake submission, consent signing, ordering, portal) require a **bearer token** obtained during the intake flow.
 
 ## What This Server Does
 
@@ -42,4 +36,4 @@ Chia Health MCP Server provides 34 tools for patient workflow integration with a
 
 Patients can browse medications, check eligibility, complete intake questionnaires, sign consent documents, place orders, pay via Stripe, and manage their treatment — all through conversational AI.
 
-All prescriptions are evaluated by licensed US healthcare providers and delivered from FDA-regulated pharmacies across 50 states + DC.
+All prescriptions are evaluated by licensed US healthcare providers and delivered from US-licensed 503A pharmacies that source their ingredients solely from FDA-regulated sources, across 50 states + DC. Chia Health is LegitScript-certified.

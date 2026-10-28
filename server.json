@@ -1,6 +1,7 @@
 {
-  "name": "doctormcp",
-  "description": "Chia Health MCP Server \u2014 Patient workflow integration for a licensed US telehealth platform. Browse GLP-1 medications (semaglutide, tirzepatide), peptide therapies (sermorelin, NAD+, glutathione), and longevity treatments. Check eligibility, complete intake, sign consents, and manage treatment plans. 34 tools, HIPAA-compliant. All prescriptions evaluated by licensed US healthcare providers and delivered from FDA-regulated pharmacies across 50 states + DC.",
+  "name": "chia-health",
+  "title": "Chia Health",
+  "description": "Chia Health MCP Server \u2014 Patient workflow integration for a licensed US telehealth platform. Browse GLP-1 medications (semaglutide, tirzepatide), peptide therapies (sermorelin, NAD+, glutathione), and longevity treatments. Check eligibility, complete intake, sign consents, and manage treatment plans. 34 tools, HIPAA-compliant. All prescriptions evaluated by licensed US healthcare providers and delivered from US-licensed 503A pharmacies that source ingredients solely from FDA-regulated sources, across 50 states + DC. LegitScript-certified.",
   "version": "1.0.0",
   "tags": [
     "healthcare",
@@ -9,7 +10,6 @@
     "prescription",
     "pharmacy",
     "online-prescription",
-    "online-doctor",
     "GLP-1",
     "semaglutide",
     "tirzepatide",
@@ -41,7 +41,8 @@
     "stripe-acp",
     "patient-workflow",
     "otp-authentication",
-    "magic-link"
+    "magic-link",
+    "legitscript-certified"
   ],
   "transport": {
     "type": "streamable-http",
